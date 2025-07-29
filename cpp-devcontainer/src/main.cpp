@@ -3,8 +3,12 @@
 
 int main() {
     initscr();            // Start ncurses mode
-    //cbreak();
-    notimeout(stdscr, true); // Set non-blocking input
+    cbreak();
+    timeout(0); // Set non-blocking input
+    noecho();
+    keypad(stdscr, TRUE);
+    curs_set(FALSE);
+
     bool exit = false; // Flag to control the main loop
 
     int x_pos = 0;
