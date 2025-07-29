@@ -15,7 +15,7 @@
             "C_Cpp.default.intelliSenseMode": "linux-gcc-x64"
         },
     }
-  }
+  },
   "postCreateCommand": "sudo apt-get update && sudo apt-get install -y libncurses-dev", 
   "remoteUser": "vscode"
   
