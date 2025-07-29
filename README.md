@@ -22,7 +22,6 @@ To get started with this project, follow these steps:
 1. **Clone the Repository**
    ```bash
    git clone <repository-url>
-   cd cpp-devcontainer
    ```
 
 2. **Open in VS Code**
