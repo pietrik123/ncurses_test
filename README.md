@@ -5,7 +5,7 @@ This project provides a development environment for C++ applications using a Doc
 ## Project Structure
 
 ```
-cpp-devcontainer
+ncurses_test
 ├── .devcontainer
 │   ├── devcontainer.json       # Configuration for the development container
 │   └── Dockerfile              # Dockerfile to build the development environment
@@ -40,7 +40,7 @@ To get started with this project, follow these steps:
 5. **Run the Application**
    After building, run the application:
    ```bash
-   ./your_executable_name
+   ./app
    ```
 
 ## Usage

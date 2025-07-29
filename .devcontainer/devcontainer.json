@@ -1,0 +1,31 @@
+{
+    "name": "Ncurses test",
+    "build": {
+        "dockerfile": "./Dockerfile" // <-- CHANGE THIS LINE
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "terminal.integrated.profiles.linux": {
+                    "bash": {
+                        "path": "bash"
+                    }
+                },
+                "C_Cpp.default.cppStandard": "c++17", // Or "c++20", "c++23" etc.
+                "C_Cpp.default.cStandard": "c11",
+                "C_Cpp.autocompleteAddParentheses": true
+            },
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-extension-pack",
+                "ms-vscode.cmake-tools",
+                "vadimcn.vscode-lldb",
+                "eamodio.gitlens",
+                "redhat.vscode-yaml",
+                "shardulm94.prettier-gulpy"
+            ]
+        }
+    }
+    // Other commented-out options remain the same
+}
