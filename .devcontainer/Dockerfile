@@ -23,12 +23,12 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Set the working directory inside the container
-WORKDIR /workspaces/cpp-ncurses-app
+WORKDIR /workspaces/ncurses_test
 
 # (Optional) Copy your source code into the container.
 # For devcontainers, VS Code will often mount your local workspace,
 # so this might not be strictly necessary here, but it's good for a standalone Docker image.
-# COPY . .
+COPY . .
 
 # (Optional) Define a default command if running the container directly
 # For devcontainers, this is usually overridden by VS Code's entrypoint
