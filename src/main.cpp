@@ -4,10 +4,14 @@
 int main() {
     initscr();            // Start ncurses mode
     cbreak();
-    timeout(0); // Set non-blocking input
+    timeout(1); // Set non-blocking input
     noecho();
     keypad(stdscr, TRUE);
     curs_set(FALSE);
+
+    start_color();
+    init_pair(1, COLOR_RED, COLOR_BLACK);
+    attron(COLOR_PAIR(1));
 
     bool exit = false; // Flag to control the main loop
 
@@ -18,20 +22,34 @@ int main() {
     x_pos /= 2; // Center the x position
     
     // main loop
-
-    int cnt=0;
     while (!exit)
     {
         int ch = getch(); // Get user input
+        switch (ch)
+        {
+            case 'w':
+                y_pos--;
+                break;
+            case 'a':
+                x_pos--;
+                break;
+            case 's':
+                y_pos++;
+                break;
+            case 'd':
+                x_pos++;
+                break;
+            case 'q':
+                exit = true;
+                break;
+        }
         clear();
         mvaddch(y_pos, x_pos, 'O'); // Clear the previous character
         refresh(); // Refresh the screen to show the output
         usleep(100000); // Sleep for 100 milliseconds
-        if (cnt++ % 1 == 0)
-        {
-            x_pos++;
-        }
     } 
+
+    attroff(COLOR_PAIR(1));
 
     // printw("Hello, World!"); // Print Hello, World!
     // refresh();           // Refresh the screen to show the output
