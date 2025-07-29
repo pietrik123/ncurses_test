@@ -1,7 +1,7 @@
 {
     "name": "Ncurses test",
     "build": {
-        "dockerfile": "./Dockerfile" // <-- CHANGE THIS LINE
+        "dockerfile": "./Dockerfile"
     },
     "customizations": {
         "vscode": {
