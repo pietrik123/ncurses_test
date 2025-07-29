@@ -9,10 +9,10 @@ RUN apt-get update && \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Set the working directory
-WORKDIR /workspace
+WORKDIR /workspace/ncurses_test
 
 # Copy the project files into the container
-COPY . /workspace
+# COPY . /workspace
 
 # Set the default command to run when starting the container
 CMD ["bash"]

@@ -1,15 +1,22 @@
 {
-  "name": "C++ Dev Container",
-  "dockerFile": "Dockerfile",
-  "extensions": [
-    "ms-vscode.cpptools",
-    "ms-vscode.cmake-tools",
-    "ms-vscode.cmake"
-  ],
-  "settings": {
-    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
-    "C_Cpp.default.intelliSenseMode": "linux-gcc-x64"
+  "name": "N-curses test",
+  "build": {
+      "dockerfile": "Dockerfile"
   },
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y libncurses-dev",
+  customizations: {
+    "vscode": {
+        "extensions": [
+            "ms-vscode.cpptools",
+            "ms-vscode.cmake-tools",
+            "ms-vscode.cmake"
+        ],
+        "settings": {
+            "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+            "C_Cpp.default.intelliSenseMode": "linux-gcc-x64"
+        },
+    }
+  }
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y libncurses-dev", 
   "remoteUser": "vscode"
+  
 }
